@@ -12,40 +12,53 @@ public interface List {
     Object[] init();
 
     /**
-     * 获取线性表长度
-     * @param list
+     * 初始化一个线性表
      * @return
      */
-    int length(Object[] list);
+    Object[] init(int size);
 
     /**
-     * 将元素插入线性表
-     * @param list
-     * @param obj
+     * 获取线性表长度
+     * @return
      */
-    void insert(Object[] list , Object obj);
+    int length();
+
+    /**
+     * 将元素插入线性表指定位置
+     * @param obj
+     * @param index
+     */
+    void insert(Object obj , int index);
 
     /**
      * 在线性表中查找某个元素的位置
-     * @param list
      * @param obj
      * @return
      */
-    int findObj(Object[] list , Object obj);
+    int find(Object obj);
 
     /**
      * 在线性表中查找某个位置的元素
-     * @param list
-     * @param obj
+     * @param index
      * @return
      */
-    Object findIndex(Object[] list , Object obj);
+    Object find(int index);
 
     /**
      * 删除线性表中某个位置的元素
-     * @param list
      * @param index
      */
-    void delete(Object[] list , int index);
+    void delete(int index);
+
+    /**
+     * 检测线性表是否为空
+     * @return
+     */
+    boolean isEmpty();
+
+    /**
+     * 输出线性表所有元素
+     */
+    void listElements();
 
 }
